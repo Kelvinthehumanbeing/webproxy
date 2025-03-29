@@ -21,6 +21,7 @@ try:
   # Create a server socket
   # ~~~~ INSERT CODE ~~~~
   serverSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+  serverSocket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
   # ~~~~ END CODE INSERT ~~~~
   print ('Created socket')
 except:
